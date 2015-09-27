@@ -1,8 +1,40 @@
 import wx
 
-app = wx.App()
 
-frame = wx.Frame(None, -1, 'Titles')
-frame.Show()
+class windowClass(wx.Frame):
 
-app.MainLoop()
+    def __init__(self, *args, **kwargs):
+        super(windowClass, self).__init__(*args, **kwargs)
+
+        self.basicGUI()
+
+    def basicGUI(self):
+
+        panel = wx.Panel(self)
+        menuBar = wx.MenuBar()
+        fileButton = wx.Menu()
+        fileButton.Append(wx.ID_ABOUT, 'About', 'status msg...')
+        fileButton.AppendSeparator()
+        exitItem = fileButton.Append(wx.ID_EXIT, 'EXITS', 'status msg...')
+
+        menuBar.Append(fileButton, 'File')
+
+        self.SetMenuBar(menuBar)
+
+        self.Bind(wx.EVT_MENU, self.Quit, exitItem)
+
+        wx.TextCtrl(panel, pos=(10, 10), size=(250,150), style=wx.TE_MULTILINE)
+
+        self.SetTitle('EPIEPPIE')
+        self.Show(True)
+
+    def Quit(self, event):
+        self.Close()
+
+def main():
+    app = wx.App()
+    windowClass(None)
+    app.MainLoop()
+
+
+main()
