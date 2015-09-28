@@ -17,6 +17,10 @@ class windowClass(wx.Frame):
         fileButton.AppendSeparator()
         exitItem = fileButton.Append(wx.ID_EXIT, 'EXITS', 'status msg...')
 
+        toolBar = self.CreateToolBar()
+        quitToolButton = toolBar.AddLabelTool(wx.ID_ANY, 'Quit', wx.Bitmap('finn.jpg'))
+        toolBar.Realize()
+
         menuBar.Append(fileButton, 'File')
 
         self.SetMenuBar(menuBar)
