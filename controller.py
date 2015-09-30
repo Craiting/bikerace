@@ -1,4 +1,5 @@
 import wx
+import wx.dataview as dv
 
 
 class windowClass(wx.Frame):
@@ -11,29 +12,11 @@ class windowClass(wx.Frame):
     def basicGUI(self):
 
         panel = wx.Panel(self)
-        menuBar = wx.MenuBar()
-        fileButton = wx.Menu()
-        fileButton.Append(wx.ID_ABOUT, 'About', 'status msg...')
-        fileButton.AppendSeparator()
-        exitItem = fileButton.Append(wx.ID_EXIT, 'EXITS', 'status msg...')
 
-        toolBar = self.CreateToolBar()
-        quitToolButton = toolBar.AddLabelTool(wx.ID_ANY, 'Quit', wx.Bitmap('finn.jpg'))
-        toolBar.Realize()
-
-        menuBar.Append(fileButton, 'File')
-
-        self.SetMenuBar(menuBar)
-
-        self.Bind(wx.EVT_MENU, self.Quit, exitItem)
-
-        wx.TextCtrl(panel, pos=(10, 10), size=(250,150), style=wx.TE_MULTILINE)
-
-        self.SetTitle('EPIEPPIE')
+        self.SetTitle('Control Form')
+        self.size(600)
         self.Show(True)
 
-    def Quit(self, event):
-        self.Close()
 
 def main():
     app = wx.App()
