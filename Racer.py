@@ -4,9 +4,11 @@ class Racer(object):
         self.bib_number = bib_number
         self.location = location
         self.timestamp = timestamp
+        self.group = "homie";
+
 
     def __str__(self):
-        return "racer:" + self.bib_number
+        return "racer:" + str(self.bib_number)
 
     def __repr__(self):
         return "racer: " + str(self.bib_number)
