@@ -19,24 +19,27 @@ sock.bind((UDP_IP, UDP_PORT))
 f = open('SensorSimulator/SensorSimulator/bin/Debug/Group.csv')
 csv_f = csv.reader(f)
 MyGroupList = GroupList()
+myracerlist = RacerList()
 for row in csv_f:
     g = Group(row[0],row[1],row[2],row[3],row[4])
     MyGroupList.list.append(g)
+
+f = open('SensorSimulator/SensorSimulator/bin/Debug/Racers.csv')
+csv_f = csv.reader(f)
+for row in csv_f:
+    racer = Racer(row[0], row[1], row[2])
+    myracerlist.add(racer)
+    MyGroupList.assign_group_to_racer(racer)
+
 count = 0;
-myracerlist = RacerList()
 def captureData(count, myracerlist):
     while True:
         count+=1
         data, addr = sock.recvfrom(1024)
         data = json.loads(data)
-        racer = Racer(data['RacerBibNumber'], data['SensorId'], data['Timestamp'])
-        MyGroupList.assign_group_to_racer(racer)
-        if data['RacerBibNumber'] not in myracerlist.list:
-            myracerlist.list[data['RacerBibNumber']] = racer
-        else:
-            pass
+        racer = myracerlist.getRacer(data['RacerBibNumber'])
+        racer.update(data['SensorId'], data['Timestamp'])
 
-        # print data
         if count%150 == 0 :
             pass
             # print myracerlist.list,len(myracerlist.list),"\n\n"
@@ -51,10 +54,11 @@ obs = ''
 while True:
     print '(r) show racers\n(co) create observer\n(lo) list observers\n' + \
          '(bo) become observer'
+    print myracerlist.list['133'].location
     user_input = raw_input(obs+'- ')
     if user_input == 'r':
-        for racer in myracerlist.list:
-            print racer
+        for key in myracerlist.list:
+            print myracerlist.list[key]
     elif user_input == 'co':
         name = raw_input('Enter observer name: ')
         print name
