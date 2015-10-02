@@ -7,6 +7,9 @@ from Racer import Racer
 from RacerList import RacerList
 from GroupList import GroupList
 from Group import Group
+from ObserverList import ObserverList
+from BigScreenObserver import BigScreenObserver
+# from Observer import Observer
 
 
 UDP_IP = "127.0.0.1"
@@ -51,6 +54,7 @@ except Exception as e:
     print "Error: unable to start thread", e
 
 obs = ''
+myobserverlist = ObserverList()
 while True:
     print '(r) show racers\n(co) create observer\n(lo) list observers\n' + \
          '(bo) become observer'
@@ -61,6 +65,10 @@ while True:
             print myracerlist.list[key]
     elif user_input == 'co':
         name = raw_input('Enter observer name: ')
-        print name
+        myobserverlist.add(BigScreenObserver(name))
     elif user_input == 'bo':
-        obs = raw_input('observer: ')
+        obs = raw_input('observer name: ')
+        myobserverlist.getObserver(obs)
+    elif user_input == 'lo':
+        for name in myobserverlist.list:
+            print myobserverlist.getObserver(name)
