@@ -37,6 +37,9 @@ for row in csv_f:
 
 mycheatdetector = CheatDetector()
 raw_racer_list = myracerlist.get_racer_list()
+# def getCheaters():
+#     while True:
+#         mycheatdetector.check_racers(raw_racer_list)
 count = 0;
 def captureData(count, myracerlist):
     while True:
@@ -45,15 +48,17 @@ def captureData(count, myracerlist):
         data = json.loads(data)
         racer = myracerlist.getRacer(data['RacerBibNumber'])
         racer.update(data['SensorId'], data['Timestamp'])
+        if racer.state != "OK":
+            racer.detect_cheating(mycheatdetector, raw_racer_list)
 
-        if count%20 == 0 :
+        if count%10 == 0 :
             for ob in myobserverlist.list:
                 # print dir(myobserverlist.list[ob])
                 myobserverlist.list[ob].update()
 
 try:
     thread.start_new_thread(captureData, (count,myracerlist))
-    thread.start_new_thread(mycheatdetector.check_racers, (raw_racer_list))
+    # thread.start_new_thread(getCheaters, ())
 except Exception as e:
     print "Error: unable to start thread", e
 
@@ -62,6 +67,7 @@ guithread = GUIthread()
 guithread.start()
 obs = ''
 myobserverlist = ObserverList()
+
 while True:
     print '(r) show racers\n(co) create observer\n(lo) list observers\n' + \
          '(bo) become observer\n(sub) subscribe to racer'
