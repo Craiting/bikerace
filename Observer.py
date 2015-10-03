@@ -7,6 +7,7 @@ class Observer(object):
     def subscribe(self, racer):
         if racer not in self.subscribedtolist:
             self.subscribedtolist.append(racer)
+            print 'subscribed to ' + str(racer)
 
     def unsubscribe(self, racer):
         self.subscribedtolist.remove(racer)

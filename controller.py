@@ -1,5 +1,6 @@
-import wx
-import wx.dataview as dv
+
+from gi.repository import Gtk
+
 
 
 class windowClass(wx.Frame):

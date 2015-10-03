@@ -1,6 +1,5 @@
-import wx
-import wx.dataview as dv
 import thread
+from gi.repository import Gtk
 
 from Observer import Observer
 
@@ -9,27 +8,16 @@ class BigScreenObserver(Observer):
 
     def __init__(self, name):
         super(BigScreenObserver, self).__init__(name)
-        try:
-            thread.start_new_thread(main, ())
-        except Exception as e:
-            print "Error: unable to start thread", e
+        self.builder = Gtk.Builder()
+        self.builder.add_from_file("GUI/BigScreen.glade")
+        self.window = self.builder.get_object("window1")
+        self.window.show_all()
+        # self.builder.get_object("label1").set_text('hi')
 
-
-class windowClass(wx.Frame):
-
-    def __init__(self, *args, **kwargs):
-        super(windowClass, self).__init__(*args, **kwargs)
-
-        self.basicGUI()
-
-    def basicGUI(self):
-
-        panel = wx.Panel(self)
-
-        self.SetTitle('Control Form')
-        self.Show(True)
-
-def main():
-    app = wx.App()
-    windowClass(None)
-    app.MainLoop()
+    def update(self):
+        for idx, racer in enumerate(self.subscribedtolist):
+            label = 'label' + str(idx+1)
+            text = str(racer.first) + '\t' + str(racer.last) + '\t' \
+            + str(racer.bib_number) + '\t' + str(racer.location) \
+            + '\t' + str(racer.timestamp)
+            self.builder.get_object(label).set_text(text)
