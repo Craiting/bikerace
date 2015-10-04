@@ -13,3 +13,4 @@ class ObserverList:
             return self.list[str(name)]
         except:
             print "no observer named " + name
+            return False
