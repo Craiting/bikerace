@@ -73,6 +73,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <signal name="clicked" handler="subscribe" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">2</property>
@@ -386,6 +387,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -398,6 +400,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -410,6 +413,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -422,6 +426,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -434,6 +439,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -446,6 +452,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -458,6 +465,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -470,6 +478,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -482,6 +491,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -494,6 +504,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -506,6 +517,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -518,6 +530,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -530,6 +543,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -542,6 +556,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -554,6 +569,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -566,6 +582,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -578,6 +595,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -590,6 +608,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -602,6 +621,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -614,6 +634,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>

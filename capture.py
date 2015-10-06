@@ -1,7 +1,7 @@
 import socket
 import json
 import csv
-import thread
+import threading
 from gi.repository import Gtk
 
 
@@ -27,13 +27,21 @@ def add_observer(evnt):
     if obs_name != '':
         myobserverlist.add(BigScreenObserver(obs_name))
         for num in range(1,21):
-            print builder.get_object("Obs"+str(num)).get_text()
+            print(builder.get_object("Obs"+str(num)).get_text())
             if builder.get_object("Obs"+str(num)).get_text() == "":
                 builder.get_object("Obs"+str(num)).set_text(obs_name)
                 break
     else:
-        print 'need to enter a name'
+        print('need to enter a name')
     Gtk.main()
+
+def clear_subscribed_list():
+    for i in range(1, 21):
+        builder.get_object('Sub'+str(i)).set_text(" ")
+
+def get_subscribed_to(observer):
+    for i in range(0, len(observer.subscribedtolist)):
+        builder.get_object('Sub'+str(i+1)).set_text(str(observer.subscribedtolist[i].bib_number))
 
 def racer_select(item, other):
     box = builder.get_object('subscribe_entry')
@@ -43,22 +51,40 @@ def select_observer(item, other):
     box = builder.get_object('observer_entry')
     box.set_text(item.get_text())
     obs = myobserverlist.getObserver(item.get_text())
+    clear_subscribed_list()
+    get_subscribed_to(obs)
+
+def unsubscribe_select(item, other):
+    box = builder.get_object('unsubscribe_entry')
+    box.set_text(item.get_text())
 
 def subscribe(evnt):
-    print 'here'
     obs = builder.get_object('observer_entry').get_text()
     curr_obs = myobserverlist.getObserver(str(obs))
     if not curr_obs: return False
     racer_bib = builder.get_object('subscribe_entry').get_text()
     racer_object = myracerlist.getRacer(racer_bib)
     curr_obs.subscribe(racer_object)
+    get_subscribed_to(curr_obs)
+
+def unsubscribe(evnt):
+    obs = builder.get_object('observer_entry').get_text()
+    curr_obs = myobserverlist.getObserver(str(obs))
+    if not curr_obs: return False
+    racer_bib = builder.get_object('unsubscribe_entry').get_text()
+    racer_object = myracerlist.getRacer(racer_bib)
+    curr_obs.unsubscribe(racer_object)
+    clear_subscribed_list()
+    get_subscribed_to(curr_obs)
 
 
 handlers = {
     "add_observer": add_observer,
     "racer_select": racer_select,
     "select_observer": select_observer,
-    "subscribe": subscribe
+    "subscribe": subscribe,
+    "unsubscribe_select": unsubscribe_select,
+    "unsubscribe": unsubscribe
 }
 
 # setup
@@ -113,39 +139,10 @@ obs = ''
 myobserverlist = ObserverList()
 
 try:
-    thread.start_new_thread(captureData, (count,myracerlist))
+    threading.Thread(target=captureData, args=(count,myracerlist)).start()
+    # thread.start_new_thread(captureData, (count,myracerlist))
     # thread.start_new_thread(get_inputs, ())
 except Exception as e:
-    print "Error: unable to start thread", e
+    print("Error: unable to start thread", e)
 
 Gtk.main()
-
-def get_inputs():
-    while True:
-        print '(r) show racers\n(co) create observer\n(lo) list observers\n' + \
-             '(bo) become observer\n(sub) subscribe to racer'
-        user_input = raw_input(obs+'- ')
-        if user_input == 'r':
-            for key in myracerlist.list:
-                print myracerlist.list[key]
-        elif user_input == 'co':
-            name = raw_input('Enter observer name: ')
-            # guithread.stop()
-            Gtk.main_quit()
-            myobserverlist.add(BigScreenObserver(name))
-            Gtk.main()
-            # guithread = GUIthread()
-            # guithread.start()
-        elif user_input == 'bo':
-            obs = raw_input('observer name: ')
-            myobserverlist.getObserver(obs)
-        elif user_input == 'lo':
-            for name in myobserverlist.list:
-                print myobserverlist.getObserver(name)
-        elif user_input == 'sub':
-            racer_bib = raw_input('racer bib number: ')
-            curr_obs = myobserverlist.getObserver(obs)
-            racer_object = myracerlist.getRacer(racer_bib)
-            curr_obs.subscribe(racer_object)
-        elif user_input == 'cheat':
-            print mycheatdetector.suspected
