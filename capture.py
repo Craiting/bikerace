@@ -13,6 +13,7 @@ from ObserverList import ObserverList
 from BigScreenObserver import BigScreenObserver
 # from GUIthread import GUIthread
 from CheatDetector import CheatDetector
+from EmailDecorator import EmailDecorator
 
 
 UDP_IP = "127.0.0.1"
@@ -77,6 +78,34 @@ def unsubscribe(evnt):
     clear_subscribed_list()
     get_subscribed_to(curr_obs)
 
+def openemailwindow(evnt):
+    Gtk.main_quit()
+    b = Gtk.Builder()
+    global emailbuilder
+    emailbuilder = b
+    b.add_from_file("GUI/emailwindow.glade")
+    window = b.get_object("emailwindow")
+    window.show_all()
+    b.connect_signals(emailhandlers)
+    Gtk.main()
+
+def settype(evnt):
+     emailbuilder.get_object("typedisplay").set_text(evnt.get_label())
+
+def submitemail(evnt):
+    typ = emailbuilder.get_object("typedisplay").get_text()
+    email = emailbuilder.get_object("emailentry").get_text()
+    # get observer in obs
+    obs = OfficialEmailDecorator(obs, email, typ) # finish this thought it adds email and type to an observer
+    emailbuilder.get_object("emailwindow").destroy()
+
+
+emailbuilder = ""
+
+emailhandlers = {
+    "settype": settype,
+    "submitemail": submitemail
+}
 
 handlers = {
     "add_observer": add_observer,
@@ -84,7 +113,8 @@ handlers = {
     "select_observer": select_observer,
     "subscribe": subscribe,
     "unsubscribe_select": unsubscribe_select,
-    "unsubscribe": unsubscribe
+    "unsubscribe": unsubscribe,
+    "openemailwindow": openemailwindow
 }
 
 # setup
@@ -93,6 +123,9 @@ builder.add_from_file("GUI/controller.glade")
 controller_window = builder.get_object("window1")
 controller_window.show_all()
 builder.connect_signals(handlers)
+# for email window
+
+
 
 f = open('SensorSimulator/SensorSimulator/bin/Debug/Group.csv')
 csv_f = csv.reader(f)

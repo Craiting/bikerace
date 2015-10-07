@@ -61,6 +61,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <signal name="clicked" handler="unsubscribe" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -2738,6 +2739,24 @@
             <property name="left_attach">2</property>
             <property name="top_attach">2</property>
           </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="addemail">
+            <property name="label" translatable="yes">Add Email Observer</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>
