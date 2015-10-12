@@ -13,6 +13,9 @@ apt-get install python-gtk python-glade2
 ### Running the program
 To start the GUI and the program type ```python capture.py```
 
+To get the program to properly import the csv files you should run the simulator
+from the simulator folder that I copied into this project.
+
 #### Add Observer and Subscribe
 Enter a name in the text field above the add observer button then click the button.
 This will create a big screen observer. To subscribe to a racer you can either
@@ -39,5 +42,6 @@ Unfortunately I was not able to fully complete the assignment. I spent a little
 over 40 hours working on it when Dr. Clyde said that we should just turn in what
 we have after 32 hours of work. I was starting to fall behind in other classes
 and forgetting things like the class discussions and readings so I stopped working
-on this assignment for a couple days. It still needs a lot of work but I was able
-to get a good portion of it done.
+on this assignment for a couple days. The diagrams were rushed as well. I didn't
+spend a lot of time on them because I spent most my time on the GUI and coding.
+The program still needs a lot of work but I was able to get a good portion of it done.
