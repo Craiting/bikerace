@@ -1,4 +1,3 @@
-import thread
 from gi.repository import Gtk
 
 from Observer import Observer
@@ -20,4 +19,11 @@ class BigScreenObserver(Observer):
             text = str(racer.first) + '\t' + str(racer.last) + '\t' \
             + str(racer.bib_number) + '\t' + str(racer.location) \
             + '\t' + str(racer.timestamp)
-            self.builder.get_object(label).set_text(text)
+            try:
+                self.builder.get_object(label).set_text(text)
+            except:
+                print('cant')
+
+    def clear_screen(self):
+        for i in range(1,14):
+            self.builder.get_object('label'+str(i)).set_text(' ')

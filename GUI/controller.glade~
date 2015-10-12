@@ -1,0 +1,2764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkWindow" id="window1">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkGrid" id="grid1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Observers</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Subscribed</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label3">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Racers</property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="addobserverbutton">
+            <property name="label" translatable="yes">Add Observer</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="relief">none</property>
+            <signal name="clicked" handler="add_observer" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="unsubscribebutton">
+            <property name="label" translatable="yes">Unsubscribe</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="unsubscribe" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="subscribebutton">
+            <property name="label" translatable="yes">Subscribe</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="subscribe" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <property name="min_content_width">200</property>
+            <property name="min_content_height">400</property>
+            <child>
+              <object class="GtkViewport" id="viewport1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="box2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel" id="Obs1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs5">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs6">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs7">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs8">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs9">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs10">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs11">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">10</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs12">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">11</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs13">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">12</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs14">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">13</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs15">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">14</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs17">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">15</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs16">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">16</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs18">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">17</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs19">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">18</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Obs20">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="select_observer" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">19</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow2">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <property name="min_content_width">200</property>
+            <property name="min_content_height">400</property>
+            <child>
+              <object class="GtkViewport" id="viewport2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="box3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel" id="Sub1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub5">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub6">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub7">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub8">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub9">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub10">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub11">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">10</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub12">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">11</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub13">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">12</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub14">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">13</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub15">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">14</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub16">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">15</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub17">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">16</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub18">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">17</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub19">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">18</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Sub20">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="unsubscribe_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">19</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow3">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <property name="min_content_width">200</property>
+            <property name="min_content_height">400</property>
+            <child>
+              <object class="GtkViewport" id="viewport3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="box4">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel" id="Rac1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac5">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac6">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac7">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac8">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac9">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac10">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac20">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">10</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac19">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">11</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac18">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">12</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac17">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">13</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac16">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">14</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac15">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">15</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac14">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">16</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac13">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">17</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac12">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">18</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac11">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">19</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac40">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">20</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac39">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">21</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac38">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">22</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac37">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">23</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac36">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">24</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac35">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">25</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac34">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">26</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac33">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">27</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac32">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">28</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac31">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">29</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac30">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">30</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac29">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">31</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac28">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">32</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac27">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">33</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac26">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">34</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac25">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">35</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac24">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">36</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac23">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">37</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac22">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">38</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac21">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">39</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac60">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">40</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac59">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac58">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">42</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac57">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">43</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac56">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">44</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac55">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">45</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac54">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">46</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac53">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">47</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac52">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">48</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac51">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">49</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac50">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">50</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac49">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">51</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac48">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">52</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac47">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">53</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac46">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">54</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac45">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">55</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac44">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">56</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac43">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">57</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac42">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">58</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac41">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">59</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac80">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">60</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac79">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">61</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac78">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">62</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac77">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">63</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac76">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">64</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac75">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">65</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac74">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">66</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac73">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">67</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac72">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">68</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac71">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">69</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac70">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">70</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac69">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">71</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac68">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">72</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac67">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">73</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac66">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">74</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac65">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">75</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac64">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">76</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac63">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">77</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac62">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">78</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac61">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">79</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac100">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">80</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac99">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">81</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac98">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">82</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac97">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">83</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac96">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">84</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac95">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">85</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac94">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">86</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac93">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">87</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac92">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">88</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac91">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">89</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac90">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">90</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac89">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">91</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac88">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">92</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac87">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">93</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac86">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">94</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac85">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">95</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac84">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">96</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac83">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">97</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac82">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">98</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac81">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">99</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac120">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">100</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac119">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">101</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac118">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">102</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac117">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">103</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac116">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">104</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac115">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac114">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">106</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac113">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">107</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac112">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">108</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac111">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">109</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac110">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">110</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac109">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">111</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac108">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">112</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac107">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">113</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac106">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">114</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac105">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">115</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac104">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">116</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac103">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">117</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac102">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">118</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac101">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">119</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac140">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">120</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac139">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">121</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac138">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">122</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac137">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">123</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac136">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">124</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac135">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">125</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac134">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">126</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac133">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">127</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac132">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">128</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac131">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">129</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac130">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">130</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac129">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">131</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac128">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">132</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac127">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">133</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac126">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">134</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac125">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">135</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac124">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">136</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac123">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">137</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac122">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">138</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac121">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">139</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac147">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">140</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac146">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">141</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac145">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">142</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac144">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">143</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac143">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">144</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac142">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">145</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac141">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">146</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac154">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">147</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac153">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">148</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac152">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">149</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac151">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">150</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac150">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">151</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac149">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">152</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac148">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">153</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac155">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">154</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Rac156">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="selectable">True</property>
+                        <signal name="button-press-event" handler="racer_select" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">155</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="observer_entry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">enter observer name</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="unsubscribe_entry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">unsubscribe id</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="subscribe_entry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">subscribe id</property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="addemail">
+            <property name="label" translatable="yes">Add Email Observer</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
